@@ -13,13 +13,6 @@ pipeline {
 
     // Define the sequence of stages in the pipeline
     stages {
-        stage('Clone Repo') {
-            steps {
-                // Clone the source code from the Git repository
-                git url: 'https://github.com/rax-ops/my-hello-world-app', branch: 'master'
-            }
-        }
-
         stage('Test Docker Access') {
             steps {
                 // Verify that the Jenkins agent has the docker command available
